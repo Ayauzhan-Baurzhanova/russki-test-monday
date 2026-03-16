@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.quiz-container {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    padding: 2rem;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.quiz-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.option-btn {
+    background-color: #f7fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+    color: #4a5568;
+}
+
+.option-btn:hover {
+    background-color: #edf2f7;
+    border-color: #cbd5e0;
+}
+
+.option-btn.selected {
+    background-color: #ebf4ff;
+    border-color: #667eea;
+    color: #4c51bf;
+    font-weight: 500;
+}
+
+.option-btn.correct {
+    background-color: #c6f6d5;
+    border-color: #48bb78;
+    color: #22543d;
+}
+
+.option-btn.wrong {
+    background-color: #fed7d7;
+    border-color: #f56565;
+    color: #742a2a;
+}
+
+.submit-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-family: inherit;
+    font-weight: 600;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 25px;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background: #5a67d8;
+}
+
+.result-container {
+    text-align: center;
+}
+
+#score-text {
+    font-size: 2rem;
+    color: #2d3748;
+    margin-bottom: 10px;
+}
+
+#feedback-text {
+    font-size: 1.2rem;
+    color: #4a5568;
+    margin-bottom: 25px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
